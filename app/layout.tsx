@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: "vehicle tracking, GPS simulation, custom routes, real-time mapping, fleet management",
   authors: [{ name: "Vehicle Tracker Team" }],
   viewport: "width=device-width, initial-scale=1",
-    generator: 'v0.dev'
+    generator: 'shhaurya.dev'
 }
 
 export default function RootLayout({

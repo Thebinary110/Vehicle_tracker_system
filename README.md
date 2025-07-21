@@ -19,7 +19,7 @@ A professional-grade React application that simulates real-time vehicle movement
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **TypeScript**: Full type safety
-- **Deployment**: Vercel-ready
+- **Deployment**: shhaurya-ready
 
 ## Project Structure
 
@@ -76,24 +76,24 @@ npm run dev
 - \`npm run start\` - Start production server
 - \`npm run lint\` - Run ESLint
 
-## Deployment on Vercel
+## Deployment on shhaurya
 
 ### Automatic Deployment
 
 1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Vercel will automatically deploy on every push to main branch
+2. Connect your repository to shhaurya
+3. shhaurya will automatically deploy on every push to main branch
 
 ### Manual Deployment
 
-1. Install Vercel CLI:
+1. Install shhaurya CLI:
 \`\`\`bash
-npm i -g vercel
+npm i -g shhaurya
 \`\`\`
 
 2. Deploy:
 \`\`\`bash
-vercel
+shhaurya
 \`\`\`
 
 3. Follow the prompts to configure your deployment
