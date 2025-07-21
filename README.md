@@ -12,127 +12,92 @@ A professional-grade React application that simulates real-time vehicle movement
 - **Performance Metrics**: Speed (km/h), elapsed time, and current coordinates
 - **Professional UI**: Clean, modern interface with intuitive controls
 
-## Tech Stack
+#  Vehicle Tracker – Custom Route Simulation
 
-- **Frontend**: Next.js 14 with React 18
-- **Mapping**: Leaflet.js with React-Leaflet
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **TypeScript**: Full type safety
-- **Deployment**: shhaurya-ready
+A responsive, frontend-only vehicle tracking simulation tool that visualizes a moving bus on a map using editable waypoints. Designed with an intuitive UI to replicate school or fleet vehicle tracking in real-time.
 
-## Project Structure
+Built as a submission for the Frontend Developer Internship Assignment – **Vehicle Movement on a Map**.
 
-\`\`\`
-vehicle-tracker/
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── control-panel.tsx
-│   └── map-view.tsx
-├── data/
-│   └── dummy-route.json
-├── hooks/
-│   └── use-vehicle-tracking.ts
-├── next.config.js
-├── package.json
-├── tailwind.config.js
-└── README.md
-\`\`\`
+---
 
-## Local Development
+##  Live Demo
 
-### Prerequisites
+ [https://vehicle-tracker-system.vercel.app](https://vehicle-tracker-system.vercel.app)
 
-- Node.js 18+ 
-- npm or yarn
+---
 
-### Installation
+## Features
 
-1. Clone the repository:
-\`\`\`bash
-git clone <repository-url>
+- Interactive map with **OpenStreetMap tiles via Leaflet**
+- Add waypoints by:
+  - Typing coordinates manually
+  - Clicking on the map
+- Draws **road-following polyline route**
+- Customizable **speed control** (1x, 2x, 5x etc.)
+- Real-time data display:
+  - Current Speed
+  - Elapsed Time
+  - Current Position (Latitude, Longitude)
+- Play / Pause control for simulation
+- JSON Download of full route with file name as:
+
+- Route editor with delete/edit for each point
+- Instructional hint box for new users
+- Responsive design for mobile & desktop
+
+---
+
+##  How to Use
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/vehicle-tracker.git
 cd vehicle-tracker
-\`\`\`
-
-2. Install dependencies:
-\`\`\`bash
 npm install
-\`\`\`
+npm start
 
-3. Start the development server:
-\`\`\`bash
-npm run dev
-\`\`\`
+```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+Add waypoints (either click on the map or enter lat/lng manually)
 
-### Available Scripts
+Click "Generate Route"
 
-- \`npm run dev\` - Start development server
-- \`npm run build\` - Build for production
-- \`npm run start\` - Start production server
-- \`npm run lint\` - Run ESLint
+Press Play to start vehicle movement
 
-## Deployment on shhaurya
+Watch the vehicle move and data update in real-time
 
-### Automatic Deployment
+🛠️ Tech Stack
+React.js (Frontend)
 
-1. Push your code to GitHub
-2. Connect your repository to shhaurya
-3. shhaurya will automatically deploy on every push to main branch
+Leaflet.js (Map rendering)
 
-### Manual Deployment
+Tailwind CSS (Styling)
 
-1. Install shhaurya CLI:
-\`\`\`bash
-npm i -g shhaurya
-\`\`\`
+Zod (Schema validation)
 
-2. Deploy:
-\`\`\`bash
-shhaurya
-\`\`\`
+React-Hook-Form (Form handling)
 
-3. Follow the prompts to configure your deployment
+### Future Add-ons
+These advanced features are planned for the next version:
 
-### Environment Configuration
+### Speed Alert System:
+If the bus speed exceeds the legal/safe limit (e.g., 40 km/h in school zones), an emergency shoutout will be displayed or spoken aloud.
 
-No environment variables required for basic functionality. The application uses:
-- OpenStreetMap tiles (no API key needed)
-- Local JSON data for route simulation
+### Smart Route Danger Detection:
+Using a mock API, if there's any construction, road block, or accident reported ahead on the path — the system will advise to reroute or slow down.
 
-## Customization
+### AI-Based Rerouting:
+Suggest alternative roads dynamically if a blockage is detected.
 
-### Route Data
+### Destination ETA Prediction:
+Based on current speed and remaining distance.
 
-Modify \`data/dummy-route.json\` to change the vehicle route:
+### Multi-Bus Simulation:
+Simulate multiple buses on the same map with different routes.
 
-\`\`\`json
-{
-  "route": [
-    {
-      "lat": 37.7749,
-      "lng": -122.4194,
-      "timestamp": 1640995200000
-    }
-  ]
-}
-\`\`\`
-
-### Styling
-
-- Update \`tailwind.config.js\` for theme customization
-- Modify component styles in respective files
-- Adjust map styling in \`components/map-view.tsx\`
-
-### Performance
-
-- Route updates every 1 second (configurable in \`use-vehicle-tracking.ts\`)
-- Map automatically centers on vehicle position
-- Optimized for smooth animations on mobile devices
+### Upload Route JSON:
+Import routes from previously saved JSON files.
 
 ## Browser Support
 
