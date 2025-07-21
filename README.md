@@ -52,7 +52,7 @@ Built as a submission for the Frontend Developer Internship Assignment – **Veh
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/vehicle-tracker.git
+git clone "https://github.com/your-username/vehicle-tracker.git](https://github.com/Thebinary110/Vehicle_tracker_system.git"
 cd vehicle-tracker
 npm install
 npm start
